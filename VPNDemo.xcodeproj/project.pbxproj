@@ -6,7 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1845B9BA2DD1EA91005F5B34 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CB48762DD116570027A057 /* NetworkExtension.framework */; };
+		1845B9C22DD1EA91005F5B34 /* FilterDataProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1845B9B92DD1EA91005F5B34 /* FilterDataProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18CB48C32DD129360027A057 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CB48762DD116570027A057 /* NetworkExtension.framework */; };
+		18CB48CB2DD129360027A057 /* ContentFilterProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 18CB48C22DD129360027A057 /* ContentFilterProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		1845B9C02DD1EA91005F5B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CB483A2DD111550027A057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1845B9B82DD1EA91005F5B34;
+			remoteInfo = FilterDataProvider;
+		};
 		18CB48532DD111570027A057 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18CB483A2DD111550027A057 /* Project object */;
@@ -21,15 +35,65 @@
 			remoteGlobalIDString = 18CB48412DD111550027A057;
 			remoteInfo = VPNDemo;
 		};
+		18CB48C92DD129360027A057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CB483A2DD111550027A057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18CB48C12DD129360027A057;
+			remoteInfo = ContentFilterProvider;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18CB48842DD116580027A057 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				18CB48CB2DD129360027A057 /* ContentFilterProvider.appex in Embed Foundation Extensions */,
+				1845B9C22DD1EA91005F5B34 /* FilterDataProvider.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1845B9B92DD1EA91005F5B34 /* FilterDataProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FilterDataProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CB48422DD111550027A057 /* VPNDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CB48522DD111570027A057 /* VPNDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPNDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CB485C2DD111580027A057 /* VPNDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPNDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CB48762DD116570027A057 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		18CB48C22DD129360027A057 /* ContentFilterProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentFilterProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1845B9C52DD1EA91005F5B34 /* Exceptions for "FilterDataProvider" folder in "FilterDataProvider" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1845B9B82DD1EA91005F5B34 /* FilterDataProvider */;
+		};
+		18CB48CC2DD129360027A057 /* Exceptions for "ContentFilterProvider" folder in "ContentFilterProvider" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 18CB48C12DD129360027A057 /* ContentFilterProvider */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		1845B9BB2DD1EA91005F5B34 /* FilterDataProvider */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1845B9C52DD1EA91005F5B34 /* Exceptions for "FilterDataProvider" folder in "FilterDataProvider" target */,
+			);
+			path = FilterDataProvider;
+			sourceTree = "<group>";
+		};
 		18CB48442DD111550027A057 /* VPNDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = VPNDemo;
@@ -45,9 +109,25 @@
 			path = VPNDemoUITests;
 			sourceTree = "<group>";
 		};
+		18CB48C42DD129360027A057 /* ContentFilterProvider */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				18CB48CC2DD129360027A057 /* Exceptions for "ContentFilterProvider" folder in "ContentFilterProvider" target */,
+			);
+			path = ContentFilterProvider;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1845B9B62DD1EA91005F5B34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1845B9BA2DD1EA91005F5B34 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CB483F2DD111550027A057 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +149,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18CB48BF2DD129360027A057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CB48C32DD129360027A057 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +166,9 @@
 				18CB48442DD111550027A057 /* VPNDemo */,
 				18CB48552DD111570027A057 /* VPNDemoTests */,
 				18CB485F2DD111580027A057 /* VPNDemoUITests */,
+				18CB48C42DD129360027A057 /* ContentFilterProvider */,
+				1845B9BB2DD1EA91005F5B34 /* FilterDataProvider */,
+				18CB48752DD116570027A057 /* Frameworks */,
 				18CB48432DD111550027A057 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,13 +179,45 @@
 				18CB48422DD111550027A057 /* VPNDemo.app */,
 				18CB48522DD111570027A057 /* VPNDemoTests.xctest */,
 				18CB485C2DD111580027A057 /* VPNDemoUITests.xctest */,
+				18CB48C22DD129360027A057 /* ContentFilterProvider.appex */,
+				1845B9B92DD1EA91005F5B34 /* FilterDataProvider.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		18CB48752DD116570027A057 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18CB48762DD116570027A057 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1845B9B82DD1EA91005F5B34 /* FilterDataProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1845B9C62DD1EA91005F5B34 /* Build configuration list for PBXNativeTarget "FilterDataProvider" */;
+			buildPhases = (
+				1845B9B52DD1EA91005F5B34 /* Sources */,
+				1845B9B62DD1EA91005F5B34 /* Frameworks */,
+				1845B9B72DD1EA91005F5B34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1845B9BB2DD1EA91005F5B34 /* FilterDataProvider */,
+			);
+			name = FilterDataProvider;
+			packageProductDependencies = (
+			);
+			productName = FilterDataProvider;
+			productReference = 1845B9B92DD1EA91005F5B34 /* FilterDataProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		18CB48412DD111550027A057 /* VPNDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CB48662DD111580027A057 /* Build configuration list for PBXNativeTarget "VPNDemo" */;
@@ -102,10 +225,13 @@
 				18CB483E2DD111550027A057 /* Sources */,
 				18CB483F2DD111550027A057 /* Frameworks */,
 				18CB48402DD111550027A057 /* Resources */,
+				18CB48842DD116580027A057 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				18CB48CA2DD129360027A057 /* PBXTargetDependency */,
+				1845B9C12DD1EA91005F5B34 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				18CB48442DD111550027A057 /* VPNDemo */,
@@ -163,6 +289,28 @@
 			productReference = 18CB485C2DD111580027A057 /* VPNDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		18CB48C12DD129360027A057 /* ContentFilterProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CB48CD2DD129360027A057 /* Build configuration list for PBXNativeTarget "ContentFilterProvider" */;
+			buildPhases = (
+				18CB48BE2DD129360027A057 /* Sources */,
+				18CB48BF2DD129360027A057 /* Frameworks */,
+				18CB48C02DD129360027A057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				18CB48C42DD129360027A057 /* ContentFilterProvider */,
+			);
+			name = ContentFilterProvider;
+			packageProductDependencies = (
+			);
+			productName = ContentFilterProvider;
+			productReference = 18CB48C22DD129360027A057 /* ContentFilterProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,6 +321,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					1845B9B82DD1EA91005F5B34 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					18CB48412DD111550027A057 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -183,6 +334,9 @@
 					18CB485B2DD111580027A057 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 18CB48412DD111550027A057;
+					};
+					18CB48C12DD129360027A057 = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -203,11 +357,20 @@
 				18CB48412DD111550027A057 /* VPNDemo */,
 				18CB48512DD111570027A057 /* VPNDemoTests */,
 				18CB485B2DD111580027A057 /* VPNDemoUITests */,
+				18CB48C12DD129360027A057 /* ContentFilterProvider */,
+				1845B9B82DD1EA91005F5B34 /* FilterDataProvider */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1845B9B72DD1EA91005F5B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CB48402DD111550027A057 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,9 +392,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18CB48C02DD129360027A057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1845B9B52DD1EA91005F5B34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CB483E2DD111550027A057 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,9 +430,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18CB48BE2DD129360027A057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1845B9C12DD1EA91005F5B34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1845B9B82DD1EA91005F5B34 /* FilterDataProvider */;
+			targetProxy = 1845B9C02DD1EA91005F5B34 /* PBXContainerItemProxy */;
+		};
 		18CB48542DD111570027A057 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 18CB48412DD111550027A057 /* VPNDemo */;
@@ -266,9 +455,66 @@
 			target = 18CB48412DD111550027A057 /* VPNDemo */;
 			targetProxy = 18CB485D2DD111580027A057 /* PBXContainerItemProxy */;
 		};
+		18CB48CA2DD129360027A057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18CB48C12DD129360027A057 /* ContentFilterProvider */;
+			targetProxy = 18CB48C92DD129360027A057 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1845B9C32DD1EA91005F5B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FilterDataProvider/FilterDataProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilterDataProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FilterDataProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naviz.VPNDemo.FilterDataProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1845B9C42DD1EA91005F5B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FilterDataProvider/FilterDataProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilterDataProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FilterDataProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naviz.VPNDemo.FilterDataProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		18CB48642DD111580027A057 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,12 +639,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VPNDemo/VPNDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VPNDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "Need to block some websites";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,12 +671,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VPNDemo/VPNDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VPNDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "Need to block some websites";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -518,9 +770,70 @@
 			};
 			name = Release;
 		};
+		18CB48CE2DD129360027A057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ContentFilterProvider/ContentFilterProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContentFilterProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ContentFilterProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naviz.VPNDemo.ContentFilterProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18CB48CF2DD129360027A057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ContentFilterProvider/ContentFilterProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LZ9NKHJ2ML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContentFilterProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ContentFilterProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naviz.VPNDemo.ContentFilterProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1845B9C62DD1EA91005F5B34 /* Build configuration list for PBXNativeTarget "FilterDataProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1845B9C32DD1EA91005F5B34 /* Debug */,
+				1845B9C42DD1EA91005F5B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18CB483D2DD111550027A057 /* Build configuration list for PBXProject "VPNDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -553,6 +866,15 @@
 			buildConfigurations = (
 				18CB486D2DD111580027A057 /* Debug */,
 				18CB486E2DD111580027A057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18CB48CD2DD129360027A057 /* Build configuration list for PBXNativeTarget "ContentFilterProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CB48CE2DD129360027A057 /* Debug */,
+				18CB48CF2DD129360027A057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,10 +1,3 @@
-//
-//  FilterControlProvider.swift
-//  FilterDataProvider
-//
-//  Created by Apple on 12/05/25.
-//
-
 import NetworkExtension
 
 class FilterControlProvider: NEFilterControlProvider {
@@ -21,6 +14,14 @@ class FilterControlProvider: NEFilterControlProvider {
     
     override func handleNewFlow(_ flow: NEFilterFlow, completionHandler: @escaping (NEFilterControlVerdict) -> Void) {
         // Add code to determine if the flow should be dropped or not, downloading new rules if required
+        if let host = flow.url?.host?.lowercased() {
+            for domain in ["youtube.com"] {
+                if host.hasSuffix(domain) {
+                    completionHandler(.drop(withUpdateRules: false))
+                    return
+                }
+            }
+        }
         completionHandler(.allow(withUpdateRules: false))
     }
 }

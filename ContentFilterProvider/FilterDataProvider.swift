@@ -1,26 +1,50 @@
-//
-//  FilterDataProvider.swift
-//  ContentFilterProvider
-//
-//  Created by Apple on 12/05/25.
-//
-
 import NetworkExtension
 
 class FilterDataProvider: NEFilterDataProvider {
 
-    override func startFilter(completionHandler: @escaping (Error?) -> Void) {
-        // Add code to initialize the filter.
-        completionHandler(nil)
-    }
+    // MARK: NEFilterDataProvider
     
-    override func stopFilter(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
-        // Add code to clean up filter resources.
-        completionHandler()
-    }
-    
+    /// Handle a new flow of data.
     override func handleNewFlow(_ flow: NEFilterFlow) -> NEFilterNewFlowVerdict {
-        // Add code to determine if the flow should be dropped or not, downloading new rules if required.
+        let result = NEFilterNewFlowVerdict.needRules()
+        return result
+    }
+    
+    /// Filter an inbound chunk of data.
+    override func handleInboundData(from flow: NEFilterFlow, readBytesStartOffset offset: Int, readBytes: Data) -> NEFilterDataVerdict {
+        var result = NEFilterDataVerdict.allow()
+        result = NEFilterDataVerdict.needRules()
+        return result
+    }
+    
+    /// Handle the event where all of the inbound data for a flow has been filtered.
+    override func handleInboundDataComplete(for flow: NEFilterFlow) -> NEFilterDataVerdict {
+        var result = NEFilterDataVerdict.allow()
+        result = NEFilterDataVerdict.needRules()
+        //result = NEFilterDataVerdict.drop()
+        return result
+    }
+    
+    /// Filter an outbound chunk of data.
+    override func handleOutboundData(from flow: NEFilterFlow, readBytesStartOffset offset: Int, readBytes: Data) -> NEFilterDataVerdict {
+        
+        var result = NEFilterDataVerdict.allow()
+        result = NEFilterDataVerdict.needRules()
+        //result = NEFilterDataVerdict.drop()
+        return result
+    }
+    
+    /// Handle the event where all of the outbound data for a flow has been filtered.
+    override func handleOutboundDataComplete(for flow: NEFilterFlow) -> NEFilterDataVerdict {
+        var result = NEFilterDataVerdict.allow()
+        result = NEFilterDataVerdict.needRules()
+        //result = NEFilterDataVerdict.drop()
+        return result
+    }
+    
+    /// Handle the user tapping on the "Request Access" link in the block page.
+    override func handleRemediation(for flow: NEFilterFlow) -> NEFilterRemediationVerdict {
+
         return .allow()
     }
 }
