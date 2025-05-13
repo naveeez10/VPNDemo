@@ -39,7 +39,7 @@ func startMyVPN() {
         // 2. Configure metadata
         manager.localizedDescription = "VPNDemo Content Filter"
         // This must match the bundle ID of your Network Extension target
-        manager.providerConfiguration?.organization = "com.naviz.VPNDemo.FilterDataProvider"
+        manager.providerConfiguration?.organization = ".com.naviz.VPNDemo.FilterDataProvider"
 
         // 3. Set up the provider configuration
         let filterConfig = NEFilterProviderConfiguration()
